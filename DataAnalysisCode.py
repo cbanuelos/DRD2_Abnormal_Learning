@@ -1,16 +1,35 @@
 import csv
 import numpy as np
 import pandas as pd
+from matplotlib import pyplot
+import seaborn as sb
 
-dataFrame = pd.read_csv('DRD2_subset_data.csv', delimiter=',')#dtype={'AGE':float,'female_1':float, 'P':float, 'Q':float, 'VS':float, 'Obesity':float, 'LABID':float})
-#data = dataFrame.dropna(subset=['P','Q','VS','DRD2'])
-#data = dataFrame.dropna()
+pd.set_option('display.max_columns', 8)
 
 
-#dataFrame[~dataFrame.isin(['NaN', 'NaT']).any(axis=1)]
 
-dataFrame.replace('        NaN', 'NaN')
-dataFrame = dataFrame.dropna()
 
-#dataFrame.isnull().describe(pd.set_option('display.max_rows',466))
-print(dataFrame)
+data = pd.read_csv('DRD2_subset_data.csv', delimiter=',')
+data = data.dropna(subset=['P','Q','VS','DRD2'])
+
+
+age_summary = data.AGE.describe()
+sex_summary = data.female_1.describe()
+all_summary = data.describe()
+
+
+print('AGE\n', age_summary)
+print('\nSEX\n', sex_summary)
+print('\n\n', all_summary)
+
+IGT_violin = sb.violinplot(data=data.iloc[:,2:4], palette='Blues')
+VS_Ob_violin = sb.violinplot(data=data.iloc[:,4:6], palette='Blues')
+AGE_violin = sb.violinplot(y='AGE', data=data, palette='Blues')
+
+IGT_violin
+VS_Ob_violin
+AGE_violin
+pyplot.show()
+# if DRD2 == 1, subjects are DRD2 deletion carriers --> low D2 receptors --> High DA
+# if DRD2 == 0, subjects are DRD2 insertion carriers --> normal D2 receptors --> Low DA
+
