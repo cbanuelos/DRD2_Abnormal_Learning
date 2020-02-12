@@ -247,7 +247,7 @@ traits==4.6.0
 unicode==2.7
 unicodecsv==0.14.1
 UNKNOWN==0.0.0
-urllib3==1.23
+urllib3==1.24.2
 versioneer==0.18
 wcwidth==0.1.7
 webencodings==0.5.1
