@@ -1,0 +1,8 @@
+,0,1,2,3
+0,Model:,OLS,Adj. R-squared:,0.028
+1,Dependent Variable:,P,AIC:,4211.3948
+2,Date:,2021-06-24 17:18,BIC:,4227.7237
+3,No. Observations:,438,Log-Likelihood:,-2101.7
+4,Df Model:,3,F-statistic:,5.162
+5,Df Residuals:,434,Prob (F-statistic):,0.00163
+6,R-squared:,0.034,Scale:,869.65
