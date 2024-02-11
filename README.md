@@ -1,7 +1,7 @@
 # DRD2_Abnormal_Learning
 This repository contains the data and data analysis code used for the project on DRD2 and abnormal learning
 
-Dependencies for the DRD2 Data Analysis - Codensed:
+Dependencies for the DRD2 Data Analysis - Condensed:
 - Python 2
 - matplotlib.pyplot as plt (Version 2.2.2)
 - ptitprince as pt (Version 0.1.4)
